@@ -1,169 +1,194 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body {
-    font-family: 'Segoe UI', sans-serif;
-    background-color: #f6f8fa;
-    color: #2d2d2d;
-    line-height: 1.6;
-  }
-  
-  .wrapper {
-    max-width: 900px;
-    margin: auto;
-    padding: 2rem;
-  }
-  
-  /* Header Section */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f6f8fa;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+.wrapper {
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+}
+
+/* Header Section */
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.profile-pic {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ddd;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.subtitle {
+  color: #555;
+  margin-bottom: 0.8rem;
+}
+
+.intro a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.intro a:hover {
+  text-decoration: underline;
+}
+
+.logo-name {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  height: 48px;
+  width: 48px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+/* Section Titles */
+section {
+  margin-bottom: 3rem;
+}
+
+section h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* Project Card */
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+  margin-bottom: 0.6rem;
+}
+
+.card ul {
+  margin: 0.8rem 0 1rem 1rem;
+  padding-left: 1rem;
+}
+
+/* Buttons */
+.button {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  margin: 0.5rem 0.5rem 0 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a73e8;
+  background-color: #eef3fc;
+  border: 1px solid #d6e0f5;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover {
+  background-color: #e0ecff;
+  text-decoration: none;
+}
+
+/* Skill Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.tags span {
+  background-color: #e6f0ff;
+  color: #004b93;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #888;
+  margin-top: 4rem;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
   .hero {
-    display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
-  }
-  
-  .profile-pic {
-    width: 130px;
-    height: 130px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #ddd;
-  }
-  
-  .intro h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.3rem;
-  }
-  
-  .subtitle {
-    color: #555;
-    margin-bottom: 0.8rem;
-  }
-  
-  .intro a {
-    color: #007acc;
-    text-decoration: none;
-    font-weight: 500;
-  }
-  
-  .intro a:hover {
-    text-decoration: underline;
-  }
-  .logo-name {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-
-    .logo {
-      height: 48px;
-      width: 48px;
-      object-fit: contain;
-      border-radius: 50%; /* Optional: keep circular shape */
-    }
-  
-  /* Section Titles */
-  section {
-    margin-bottom: 3rem;
-  }
-  
-  section h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-  }
-  
-  /* Project Card */
-  .card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 1.5rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-  }
-  
-  .card h3 {
-    margin-bottom: 0.6rem;
-  }
-  
-  .card ul {
-    margin: 0.8rem 0 1rem 1rem;
-    padding-left: 1rem;
-  }
-  
-  .button {
-    display: inline-block;
-    padding: 0.6rem 1.2rem;
-    margin: 0.5rem 0.5rem 0 0;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #1a73e8;
-    background-color: #eef3fc;
-    border: 1px solid #d6e0f5;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: background-color 0.2s ease;
-  }
-  
-  .button:hover {
-    background-color: #e0ecff;
-    text-decoration: none;
-  }
-  
-  
-  /* Skill Tags */
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.6rem;
-  }
-  
-  .tags span {
-    background-color: #e6f0ff;
-    color: #004b93;
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-size: 0.9rem;
-  }
-  
-  /* Footer */
-  footer {
     text-align: center;
-    font-size: 0.9rem;
-    color: #888;
-    margin-top: 4rem;
   }
 
-  @media (max-width: 768px) {
-    .hero {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-  
-    .intro h1 {
-      font-size: 2rem;
-    }
-  
-    .intro p.subtitle {
-      font-size: 1rem;
-    }
-  
-    .card {
-      padding: 1rem;
-    }
-  
-    .tags {
-      justify-content: center;
-    }
-  
-    .tags span {
-      font-size: 0.8rem;
-      padding: 0.4rem 0.8rem;
-    }
+  .hero .intro {
+    margin-top: 1rem;
   }
 
-  
-  
+  .profile-pic {
+    width: 100px;
+    height: 100px;
+  }
+
+  .logo-name {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .logo-name h1,
+  .intro h1 {
+    font-size: 2rem;
+  }
+
+  .intro p.subtitle {
+    font-size: 1rem;
+  }
+
+  .tags {
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tags span {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+
+  iframe {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 16 / 9;
+  }
+
+  img[alt="Estadio Nacional"] {
+    width: 90% !important;
+  }
+}
