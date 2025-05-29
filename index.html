@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Jose Abarca – Data Engineer</title>
+  <title>Jose Abarca – Data Analyst</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrapper">
     <header class="hero">
-      <img src="assets/profile.PNG" alt="Profile photo" class="profile-pic"/>
+      <img src="assets/profile.jpeg" alt="Profile photo" class="profile-pic"/>
       <div class="intro">
-        <h1>Jose Abarca</h1>
-        <p class="subtitle">Data Engineer | Python QA Automation | SQL & Cloud Enthusiast</p>
+        <div class="logo-name">
+          <img src="assets/logo.png" alt="JA Logo" class="logo"/>
+          <h1>Jose Abarca</h1>
+        </div>
+        <p class="subtitle">Data Analyst | Python QA Automation | SQL & Cloud Enthusiast</p>
         <p>
           <a href="https://www.linkedin.com/in/joseabarcasuarez/" target="_blank">LinkedIn</a> ·
           <a href="mailto:jooabarca@gmail.com">jooabarca@gmail.com</a> ·
@@ -48,19 +51,21 @@
         <div class="card">
           <h3>Checkout Page – Automation Testing (POM)</h3>
           <p>
-            Developed end-to-end test automation for a mock checkout flow using <strong>Playwright</strong> and <strong>Pytest</strong> with the Page Object Model pattern.
-            Focused on validating form submissions, error handling, and price accuracy.
+            Designed and implemented a complete QA automation framework for a checkout flow using <strong>Python</strong>, <strong>Playwright</strong>, and <strong>Pytest</strong>. 
+            The project follows the <strong>Page Object Model (POM)</strong> design pattern for modularity and maintainability. Integrated with <strong>Jenkins</strong> for CI/CD, triggered automatically via a <strong>GitHub webhook</strong> tunneled through <strong>ngrok</strong>. Test results are captured and visualized using <strong>Allure Reports</strong>.
           </p>
           <ul>
-            <li>Tested shipping info, email validation, and payment flow</li>
-            <li>Used Playwright with Python and Pytest fixtures</li>
-            <li>Modular test design via Page Object Model (POM)</li>
-            <li>Mapped automated tests to manual test cases in Jira</li>
+            <li>Automated end-to-end tests for shipping info, payment validation, and error handling</li>
+            <li>Structured test scripts using Page Object Model (POM)</li>
+            <li>Used Pytest fixtures for reusable setup and teardown logic</li>
+            <li>CI pipeline built in Jenkins and integrated via GitHub Webhook</li>
+            <li>Real-time tunneling of local Jenkins using ngrok</li>
+            <li>Test results visualized with integrated Allure reporting</li>
           </ul>
-          <p><strong>Tech stack:</strong> Python, Playwright, Pytest, GitHub, Jira</p>
+          <p><strong>Tech stack:</strong> Python, Playwright, Pytest, Jenkins, GitHub, ngrok, Allure, Jira</p>
           <p>
-            <a href="https://github.com/jooabarca/checkout-pom-tests" target="_blank" class="button">GitHub Repo</a>
-            <a href="https://your-jira-link.com" target="_blank" class="button">Jira Test Plan</a>
+            <a href="https://github.com/jooabarca/AutomationCourse-g1" target="_blank" class="button">GitHub Repo</a>
+            <a href="assets/JoseAbarca_QA_Report.pdf" target="_blank" class="button">📄 QA Report (PDF)</a>
           </p>
         </div>
       </section>
@@ -99,18 +104,34 @@
       <section>
         <h2>Skills</h2>
         <div class="tags">
+          <!-- Programming & Scripting -->
           <span>Python</span>
           <span>SQL</span>
-          <span>PostgreSQL</span>
-          <span>Streamlit</span>
-          <span>Selenium</span>
-          <span>Playwright</span>
-          <!--<span>Airflow</span>-->
-          <span>Docker</span>
-          <!--<span>GCP (BigQuery)</span>-->
-          <span>AWS (Lambda, S3)</span>
           <span>Pandas</span>
           <span>NumPy</span>
+
+          <!-- Test Automation -->
+          <span>Pytest</span>
+          <span>Playwright</span>
+          <span>Selenium</span>
+          <span>Test Automation</span>
+
+          <!-- CI/CD & DevOps -->
+          <span>Jenkins</span>
+          <span>GitHub</span>
+          <span>ngrok</span>
+          <span>Docker</span>
+
+          <!-- Reporting & Monitoring -->
+          <span>Allure</span>
+
+          <!-- Web & Visualization -->
+          <span>Streamlit</span>
+
+          <!-- Databases -->
+          <span>PostgreSQL</span>
+
+          <!-- Project Management & Collaboration -->
           <span>Jira</span>
         </div>
       </section>
