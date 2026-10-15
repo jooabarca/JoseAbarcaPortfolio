@@ -367,6 +367,10 @@ strong {
   color: #d6d1f5;
 }
 
+.lead + .lead {
+  margin-top: 0.9rem;
+}
+
 .sub {
   font-family: var(--font-mono);
   font-weight: 400;
