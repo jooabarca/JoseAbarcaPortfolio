@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jose Abarca // Data · QA · AI</title>
-  <meta name="description" content="Jose Abarca: data analyst and Python QA automation engineer. Featured builds: Mi Asistente, a real-time voice AI companion, and Hagotek's website and ERP." />
+  <title>Jose Abarca // Data Analyst · SQL · Power BI</title>
+  <meta name="description" content="Jose Abarca: data analyst working with SQL, Python and Power BI, building data pipelines and automation. Featured builds: Mi Asistente, a real-time voice AI companion, and Hagotek's website, ERP and tender radar." />
   <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48 64x64" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -32,7 +32,7 @@
       <div class="intro">
         <p class="kicker">&gt; whoami<span class="caret">_</span></p>
         <h1 class="glitch" data-text="JOSE ABARCA">JOSE ABARCA</h1>
-        <p class="subtitle">Data Analyst <b>//</b> Python QA Automation <b>//</b> SQL &amp; Cloud Enthusiast</p>
+        <p class="subtitle">Data Analyst <b>//</b> SQL · Python · Power BI <b>//</b> Data Pipelines &amp; Automation</p>
         <nav class="links">
           <a class="btn btn-ghost" href="https://www.linkedin.com/in/joseabarcasuarez/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn btn-ghost" href="mailto:jooabarca@gmail.com">Email</a>
@@ -259,6 +259,34 @@
     const tick = () => { clock.textContent = new Date().toLocaleTimeString("en-GB"); };
     tick();
     setInterval(tick, 1000);
+
+    // Keep the profile photo and screenshots clean: cut a hole in the scanline overlay over each one.
+    // The mask is one full layer minus one layer per image (exclude / xor).
+    const scan = document.querySelector(".scanlines");
+    const shots = [...document.querySelectorAll(".avatar img, .screen img")];
+    const cutHoles = () => {
+      const base = document.body.getBoundingClientRect();
+      const layers = ["linear-gradient(#000, #000)"];
+      const pos = ["0 0"];
+      const size = ["100% 100%"];
+      for (const img of shots) {
+        const r = img.getBoundingClientRect();
+        layers.push("linear-gradient(#000, #000)");
+        pos.push(`${r.left - base.left}px ${r.top - base.top}px`);
+        size.push(`${r.width}px ${r.height}px`);
+      }
+      for (const p of ["mask", "webkitMask"]) {
+        scan.style[p + "Image"] = layers.join(",");
+        scan.style[p + "Position"] = pos.join(",");
+        scan.style[p + "Size"] = size.join(",");
+      }
+      scan.style.maskComposite = "exclude";
+      scan.style.webkitMaskComposite = "xor";
+    };
+    cutHoles();
+    // lazy images and web fonts change the layout after load, so re-cut on any resize
+    new ResizeObserver(cutHoles).observe(document.body);
+    shots.forEach((img) => img.addEventListener("load", cutHoles));
   </script>
 </body>
 </html>
