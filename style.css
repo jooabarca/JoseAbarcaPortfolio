@@ -607,6 +607,16 @@ strong {
   margin-right: 0.6rem;
 }
 
+.screen-hint {
+  padding: 0.35rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  border-top: 1px solid rgba(0, 240, 255, 0.35);
+  background: rgba(0, 240, 255, 0.05);
+}
+
 .chips-row {
   margin-top: 1.2rem;
 }

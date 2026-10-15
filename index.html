@@ -176,7 +176,6 @@
               <li>Dispatch notes that discount stock, purchase orders with goods receipt, and low-stock alerts</li>
               <li>Projects with tasks and attachments, plus a draw.io-style editor for AV and network connectivity diagrams</li>
               <li>Expenses by cost center, VAT and profitability reports, and a dashboard with sales rankings</li>
-              <li>A daily GitHub Actions job that pulls open tenders from Mercado Público, Chile's public procurement platform, filters them by keywords and UNSPSC codes and emails the new matches</li>
               <li>Five roles with server-side permission checks, account lockout after 5 failed logins and encrypted backups</li>
               <li>A staging copy of production that blocks real tax documents, for testing changes safely</li>
             </ul>
@@ -190,6 +189,43 @@
 
             <div class="actions">
               <span class="locked">PRIVATE REPO <b>//</b> CLIENT DATA STAYS PRIVATE</span>
+            </div>
+
+            <h3 class="part-title"><span>02.C</span> Tender radar</h3>
+            <p class="lead">
+              Chile's public institutions buy through <strong>Mercado Público</strong>, the state procurement platform.
+              Paid platforms sell tender alerts as a monthly subscription; this one is built into the ERP and tuned to
+              exactly what Hagotek installs. Every morning a <strong>GitHub Actions</strong> job pulls the open tenders,
+              scores the ones it hasn't seen yet and keeps the relevant ones. Unlike the rest of the ERP, this module only
+              works with public data, so it gets a real screenshot:
+            </p>
+
+            <figure class="screen">
+              <figcaption class="screen-bar">
+                <span>LIVE_FEED // tenders</span>
+                <span class="rec on"><i></i>DAILY SYNC</span>
+              </figcaption>
+              <a href="assets/hagotek-licitaciones.png" target="_blank" rel="noopener" title="Open full size">
+                <img src="assets/hagotek-licitaciones.png" alt="Hagotek ERP tenders page: open Mercado Público tenders ranked by score, each with closing date, title, buyer and region, category tags such as CCTV / seguridad and Con instalación, and the status Nueva" loading="lazy" />
+              </a>
+              <p class="screen-hint">&gt; tap / click to open full size</p>
+            </figure>
+
+            <h3 class="sub">&gt; how it decides</h3>
+            <ul class="features">
+              <li>Weighted keyword rules for five categories (audio, audiovisual, CCTV / security, access control, automation); a match in the title or description weighs more than one buried in the item list</li>
+              <li>The UNSPSC product codes of each item add to the score</li>
+              <li>Filters out tenders that only match by shared words (security guards, medical hearing aids…) and one-off event rentals</li>
+              <li>Flags the ones that include on-site installation, not just shipping boxes</li>
+              <li>Keeps tracking saved tenders after they close, to see whether they were awarded or declared void</li>
+              <li>Emails a morning digest of the new matches through Resend, with HTML built to render in Outlook</li>
+              <li>In the ERP: open / following / discarded views, category and installation filters, search, and a status for each tender from New to Bidding to Won or Lost</li>
+              <li>Deliberately simple: hand-tuned rules refined by checking what gets in and what doesn't, not a model</li>
+            </ul>
+
+            <div class="chips chips-row">
+              <span>Mercado Público API</span><span>GitHub Actions cron</span><span>Regex scoring</span><span>UNSPSC</span>
+              <span>Resend</span><span>Prisma</span>
             </div>
           </div>
         </article>
