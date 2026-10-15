@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Jose Abarca // Data · QA · AI</title>
-  <meta name="description" content="Jose Abarca: data analyst and Python QA automation engineer. Featured build: Mi Asistente, a real-time voice AI companion." />
+  <meta name="description" content="Jose Abarca: data analyst and Python QA automation engineer. Featured builds: Mi Asistente, a real-time voice AI companion, and Hagotek's website and ERP." />
   <link rel="icon" href="assets/favicon.ico" sizes="16x16 32x32 48x48 64x64" />
   <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon.png" />
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
@@ -98,6 +98,98 @@
               <a class="btn btn-primary" href="https://github.com/jooabarca/mi-asistente/releases/latest/download/Mi-Asistente-Windows.zip">Download for Windows</a>
               <a class="btn btn-ghost" href="https://github.com/jooabarca/mi-asistente" target="_blank" rel="noopener">GitHub Repo</a>
               <p class="dl-note">&gt; free demo // windows 10-11 // 41 MB zip // unzip and run <code>Mi Asistente.exe</code>. Use earbuds. If Windows says "protected your PC", click <em>More info</em> &rarr; <em>Run anyway</em>.</p>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="block">
+        <p class="section-tag">// 02 — IN PRODUCTION</p>
+        <h2 class="section-title" data-text="HAGOTEK">HAGOTEK</h2>
+
+        <article class="panel">
+          <div class="panel-inner">
+            <p class="panel-kicker">AV &amp; SECURITY INTEGRATOR <span>·</span> CHILE <span>·</span> CO-OWNER &amp; SOLE DEVELOPER</p>
+            <p class="lead">
+              Hagotek is a Chilean company that designs and installs <strong>audio, video, electronic security and smart
+              lighting</strong> systems across the country. I'm one of its co-owners, and I built its two pieces of software
+              on my own: the public website and the ERP the company runs on.
+            </p>
+
+            <h3 class="part-title"><span>02.A</span> Website</h3>
+            <p class="lead">
+              A bilingual <strong>Spanish / English</strong> site with a page for each service and a direct WhatsApp line
+              for quotes. Static, built with <strong>Astro</strong>, deployed on <strong>Netlify</strong> and with a sitemap
+              for search engines.
+            </p>
+
+            <figure class="screen">
+              <figcaption class="screen-bar">
+                <span>LIVE_FEED // hagotek.cl</span>
+                <span class="rec on"><i></i>ONLINE</span>
+              </figcaption>
+              <img src="assets/hagotek-landing.jpg" alt="Hagotek website home page: a conference room with a video wall behind the headline 'Complete engineering solutions in audio, video, security, and smart lighting'" loading="lazy" />
+            </figure>
+
+            <div class="chips chips-row">
+              <span>Astro</span><span>Netlify</span><span>i18n ES / EN</span><span>Sitemap</span>
+            </div>
+
+            <div class="actions">
+              <a class="btn btn-primary" href="https://hagotek.cl/en/" target="_blank" rel="noopener">Visit hagotek.cl</a>
+            </div>
+
+            <h3 class="part-title"><span>02.B</span> In-house ERP</h3>
+            <p class="lead">
+              A private web app that covers the whole commercial cycle: a quote becomes a sales order, the order produces
+              dispatch notes and invoices, and every tax document is issued electronically to Chile's tax service
+              (<strong>SII</strong>). The team uses it every day. Its data is real client information, so instead of
+              screenshots, this is how documents flow through it:
+            </p>
+
+            <div class="flow" role="img" aria-label="Document flow: a quote becomes a sales order; the sales order produces dispatch notes (DTE 52) and invoices (DTE 33); invoices can get credit notes (DTE 61); every electronic document is issued to Chile's tax service, the SII.">
+              <div class="flow-node"><small>01</small>Quote</div>
+              <div class="flow-arrow"></div>
+              <div class="flow-node"><small>02</small>Sales order</div>
+              <div class="flow-arrow"></div>
+              <div class="flow-stack">
+                <p class="flow-stack-label">e-documents</p>
+                <div class="flow-node dte"><small>DTE 52</small>Dispatch note</div>
+                <div class="flow-node dte"><small>DTE 33</small>Invoice</div>
+                <div class="flow-sub"><span>↳</span><div class="flow-node dte"><small>DTE 61</small>Credit note</div></div>
+              </div>
+              <div class="flow-arrow"></div>
+              <div class="flow-node sii"><small>Tax service</small>SII</div>
+            </div>
+
+            <div class="stats">
+              <div class="stat"><b>3</b><span>SII e-document types</span></div>
+              <div class="stat"><b>8</b><span>business modules</span></div>
+              <div class="stat"><b>5</b><span>user roles</span></div>
+              <div class="stat"><b>24</b><span>data models</span></div>
+            </div>
+
+            <h3 class="sub">&gt; capabilities</h3>
+            <ul class="features">
+              <li>Quotes and sales orders with per-line cost and margin, and prices in CLP or USD per product</li>
+              <li>Electronic invoices, dispatch notes and credit notes issued to the SII through the Soluciones Market DTE engine, with RUTs and SII field limits validated before emitting</li>
+              <li>Dispatch notes that discount stock, purchase orders with goods receipt, and low-stock alerts</li>
+              <li>Projects with tasks and attachments, plus a draw.io-style editor for AV and network connectivity diagrams</li>
+              <li>Expenses by cost center, VAT and profitability reports, and a dashboard with sales rankings</li>
+              <li>A daily GitHub Actions job that pulls open tenders from Mercado Público, Chile's public procurement platform, filters them by keywords and UNSPSC codes and emails the new matches</li>
+              <li>Five roles with server-side permission checks, account lockout after 5 failed logins and encrypted backups</li>
+              <li>A staging copy of production that blocks real tax documents, for testing changes safely</li>
+            </ul>
+
+            <h3 class="sub">&gt; stack</h3>
+            <div class="chips">
+              <span>Next.js</span><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>Prisma</span>
+              <span>NextAuth</span><span>Tailwind CSS</span><span>shadcn/ui</span><span>Zod</span><span>React Flow</span>
+              <span>jsPDF</span><span>GitHub Actions</span><span>Vercel</span>
+            </div>
+
+            <div class="actions">
+              <span class="locked">PRIVATE REPO <b>//</b> CLIENT DATA STAYS PRIVATE</span>
             </div>
           </div>
         </article>
