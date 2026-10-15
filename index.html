@@ -260,10 +260,10 @@
     tick();
     setInterval(tick, 1000);
 
-    // Keep the profile photo and screenshots clean: cut a hole in the scanline overlay over each one.
-    // The mask is one full layer minus one layer per image (exclude / xor).
+    // Keep screenshots clean: cut a hole in the scanline overlay over each one.
+    // The mask is one full layer minus one layer per screenshot (exclude / xor).
     const scan = document.querySelector(".scanlines");
-    const shots = [...document.querySelectorAll(".avatar img, .screen img")];
+    const shots = [...document.querySelectorAll(".screen img")];
     const cutHoles = () => {
       const base = document.body.getBoundingClientRect();
       const layers = ["linear-gradient(#000, #000)"];
