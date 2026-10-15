@@ -522,6 +522,28 @@ strong {
 
 .actions {
   margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.dl-note {
+  flex-basis: 100%;
+  margin: 0.2rem 0 0;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+.dl-note code {
+  color: var(--yellow);
+}
+
+.dl-note em {
+  font-style: normal;
+  color: var(--cyan);
 }
 
 .btn {
