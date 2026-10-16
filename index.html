@@ -42,196 +42,365 @@
     </section>
 
     <main>
-      <section class="block">
-        <p class="section-tag">// 01 — FEATURED BUILD</p>
-        <h2 class="section-title" data-text="MI ASISTENTE">MI ASISTENTE</h2>
+      <section class="block deck" aria-label="Choose a track">
+        <p class="section-tag">// SELECT TRACK</p>
 
-        <article class="panel">
-          <div class="panel-inner">
-            <p class="panel-kicker">REAL-TIME VOICE AI COMPANION <span>·</span> LANGUAGE COACH <span>·</span> WINDOWS <span>·</span> ANDROID</p>
-            <p class="lead">
-              A desktop voice assistant I talk to through my earbuds. It streams audio to the
-              <strong>Gemini Live API</strong> (or the <strong>OpenAI Realtime API</strong>) over WebSockets, answers in a
-              natural voice and can be interrupted mid-sentence. Its listener modes stay silent during meetings and only
-              whisper a correction when someone says something false, a neutral counterpoint to sweeping opinions, or a
-              useful fact, checking <strong>Wikipedia</strong> before correcting.
-            </p>
-            <p class="lead">
-              It's also the perfect partner to learn <strong>English, Spanish, Portuguese or Japanese</strong>: it talks
-              with you in the language, corrects your mistakes on the spot and saves them so you can review them later.
-            </p>
-
-            <figure class="screen">
-              <figcaption class="screen-bar">
-                <span>LIVE_FEED // mi-asistente.exe</span>
-                <span class="rec"><i></i>REC</span>
-              </figcaption>
-              <img src="assets/mi-asistente.png" alt="Mi Asistente desktop app in dark mode, in fact-checker plus useful-facts mode, correcting a false claim after a Wikipedia lookup" loading="lazy" />
-            </figure>
-
-            <div class="stats">
-              <div class="stat"><b>4</b><span>languages to learn</span></div>
-              <div class="stat"><b>30</b><span>selectable voices</span></div>
-              <div class="stat"><b>11</b><span>memory folders</span></div>
-              <div class="stat"><b>7</b><span>personality modes</span></div>
-            </div>
-
-            <h3 class="sub">&gt; capabilities</h3>
-            <ul class="features">
-              <li>Real-time speech-to-speech with server-side voice detection, barge-in and automatic session resumption</li>
-              <li>Language-coach modes for English, Spanish, Portuguese and Japanese that correct mistakes as you speak</li>
-              <li>Fact-checker modes with Wikipedia lookups, and Google Search when the API plan allows it</li>
-              <li>Long-term memory in SQLite organized in folders (agenda, music, learning…), searchable by voice and in the app</li>
-              <li>Editable personalities as Markdown profiles, 30 voices, sleep mode and global hotkeys</li>
-              <li>Warm light/dark desktop UI built with customtkinter</li>
-              <li>Scripted server-event tests for interruptions, tool calls and reconnects, all offline with Pytest</li>
-            </ul>
-
-            <h3 class="sub">&gt; stack</h3>
-            <div class="chips">
-              <span>Python</span><span>asyncio</span><span>Gemini Live API</span><span>OpenAI Realtime API</span>
-              <span>WebSockets</span><span>SQLite</span><span>NumPy</span><span>sounddevice</span>
-              <span>customtkinter</span><span>Pytest</span>
-            </div>
-
-            <div class="actions">
-              <a class="btn btn-primary" href="https://github.com/jooabarca/mi-asistente/releases/latest/download/Mi-Asistente-Windows.zip">Download for Windows</a>
-              <a class="btn btn-primary" href="https://github.com/jooabarca/mi-asistente-android/releases/latest/download/Mi-Asistente-Android.apk">Download for Android</a>
-              <a class="btn btn-ghost" href="https://github.com/jooabarca/mi-asistente" target="_blank" rel="noopener">GitHub Repo</a>
-              <p class="dl-note">&gt; free demo // windows 10-11 // 41 MB zip // unzip and run <code>Mi Asistente.exe</code>. Use earbuds. If Windows says "protected your PC", click <em>More info</em> &rarr; <em>Run anyway</em>.</p>
-              <p class="dl-note">&gt; android 10+ // 31 MB apk // open it on your phone and allow installing from your browser, then give it the microphone.</p>
-            </div>
+        <div class="ring-nav">
+          <button class="ring-arrow prev" type="button" aria-label="Previous track"><i></i></button>
+          <div class="ring-tabs" role="tablist" aria-label="Portfolio tracks">
+            <button class="btn tab-btn" role="tab" id="tab-work" aria-controls="work" aria-selected="true">01 // Work</button>
+            <button class="btn tab-btn" role="tab" id="tab-dashboards" aria-controls="dashboards" aria-selected="false" tabindex="-1">02 // Dashboards</button>
+            <button class="btn tab-btn" role="tab" id="tab-builds" aria-controls="builds" aria-selected="false" tabindex="-1">03 // Side builds</button>
           </div>
-        </article>
+          <button class="ring-arrow next" type="button" aria-label="Next track"><i></i></button>
+        </div>
       </section>
 
-      <section class="block">
-        <p class="section-tag">// 02 — IN PRODUCTION</p>
-        <h2 class="section-title" data-text="HAGOTEK">HAGOTEK</h2>
+      <div class="tracks-stage">
+        <div class="tracks-rotor">
+          <div class="track" id="work" role="tabpanel" aria-labelledby="tab-work" style="--i: 0">
+            <div class="track-front">
+              <div class="track-inner">
+                <section class="block">
+                  <p class="section-tag">// 01.1 — WHOAMI</p>
+                  <h2 class="section-title" data-text="ABOUT ME">ABOUT ME</h2>
+                  <article class="panel">
+                    <div class="panel-inner">
+                      <p class="lead">
+                        I'm a data analyst from Chile who likes owning the whole path of the data: pulling it out of the
+                        platforms where it's born, landing it clean in <strong>SQL Server</strong>, automating the refresh, and
+                        turning it into <strong>Power BI</strong> reports that people actually open. At OurRescue I do that for
+                        fundraising, marketing, e-commerce, finance and mission teams.
+                      </p>
+                      <p class="lead">
+                        I studied Computer Information Technology in the US, so I'm as comfortable writing the Python and
+                        T-SQL behind a report as I am designing the report itself, and I work in
+                        <strong>Spanish and English</strong>.
+                      </p>
 
-        <article class="panel">
-          <div class="panel-inner">
-            <p class="panel-kicker">AV &amp; SECURITY INTEGRATOR <span>·</span> CHILE <span>·</span> CO-OWNER &amp; SOLE DEVELOPER</p>
-            <p class="lead">
-              Hagotek is a Chilean company that designs and installs <strong>audio, video, electronic security and smart
-              lighting</strong> systems across the country. I'm one of its co-owners, and I built its two pieces of software
-              on my own: the public website and the ERP the company runs on.
-            </p>
+                      <h3 class="sub">&gt; education</h3>
+                      <ul class="features">
+                        <li><strong>Bachelor's in Computer Information Technology</strong> · BYU-Idaho · Rexburg, Idaho, USA</li>
+                        <li><strong>Datapath certification</strong> · Derby, England</li>
+                      </ul>
 
-            <h3 class="part-title"><span>02.A</span> Website</h3>
-            <p class="lead">
-              A bilingual <strong>Spanish / English</strong> site with a page for each service and a direct WhatsApp line
-              for quotes. Static, built with <strong>Astro</strong>, deployed on <strong>Netlify</strong> and with a sitemap
-              for search engines.
-            </p>
+                      <h3 class="sub">&gt; also</h3>
+                      <ul class="features">
+                        <li>Two years of full-time volunteer service as a missionary for The Church of Jesus Christ of Latter-day Saints</li>
+                      </ul>
+                    </div>
+                  </article>
+                </section>
 
-            <figure class="screen">
-              <figcaption class="screen-bar">
-                <span>LIVE_FEED // hagotek.cl</span>
-                <span class="rec on"><i></i>ONLINE</span>
-              </figcaption>
-              <img src="assets/hagotek-landing.jpg" alt="Hagotek website home page: a conference room with a video wall behind the headline 'Complete engineering solutions in audio, video, security, and smart lighting'" loading="lazy" />
-            </figure>
+                <section class="block">
+                  <p class="section-tag">// 01.2 — DATA ANALYST</p>
+                  <h2 class="section-title" data-text="OURRESCUE">OURRESCUE</h2>
+                  <article class="panel">
+                    <div class="panel-inner">
+                      <p class="panel-kicker">DATA ANALYST <span>·</span> NONPROFIT <span>·</span> SQL SERVER + POWER BI</p>
+                      <p class="lead">
+                        OurRescue is a nonprofit that fights child trafficking and exploitation. Its teams run on a dozen
+                        different platforms, from the donation forms and the CRM to the online store, ads and social media, and
+                        each one keeps its own data. I built the layer that brings them together: Python jobs that pull
+                        each platform's data into <strong>SQL Server</strong>, on a schedule, and the <strong>Power BI</strong>
+                        reports that each department uses to make decisions.
+                      </p>
 
-            <div class="chips chips-row">
-              <span>Astro</span><span>Netlify</span><span>i18n ES / EN</span><span>Sitemap</span>
-            </div>
+                      <div class="flow pipeline" role="img" aria-label="Data pipeline: donations, CRM, e-commerce, marketing and web platforms feed Python ETL jobs, which load SQL Server staging tables and merge them into reporting tables, which feed Power BI reports.">
+                        <div class="flow-stack">
+                          <p class="flow-stack-label">sources</p>
+                          <div class="flow-node dte"><small>Giving</small>Donations · CRM</div>
+                          <div class="flow-node dte"><small>Commerce</small>Store · Shipping</div>
+                          <div class="flow-node dte"><small>Marketing</small>Ads · Social · Web</div>
+                        </div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-node"><small>Python</small>ETL jobs</div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-node"><small>SQL Server</small>Stage → Merge</div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-node sii"><small>Reporting</small>Power BI</div>
+                      </div>
 
-            <div class="actions">
-              <a class="btn btn-primary" href="https://hagotek.cl/en/" target="_blank" rel="noopener">Visit hagotek.cl</a>
-            </div>
+                      <div class="stats">
+                        <div class="stat"><b>10+</b><span>connected platforms</span></div>
+                        <div class="stat"><b>30+</b><span>Power BI reports</span></div>
+                        <div class="stat"><b>40+</b><span>Python ETL scripts</span></div>
+                        <div class="stat"><b>1h</b><span>fastest refresh cycle</span></div>
+                      </div>
 
-            <h3 class="part-title"><span>02.B</span> In-house ERP</h3>
-            <p class="lead">
-              A private web app that covers the whole commercial cycle: a quote becomes a sales order, the order produces
-              dispatch notes and invoices, and every tax document is issued electronically to Chile's tax service
-              (<strong>SII</strong>). The team uses it every day. Its data is real client information, so instead of
-              screenshots, this is how documents flow through it:
-            </p>
+                      <h3 class="sub">&gt; what I do</h3>
+                      <div class="examples">
+                        <div class="example">
+                          <b>Data pipelines</b>
+                          <span>Python ETL from REST APIs (donations, CRM, Shopify, ShipStation, GA4, Google Ads, Meta, YouTube, volunteer and matching-gift platforms) into SQL Server staging tables, with retries, pagination and incremental loads.</span>
+                        </div>
+                        <div class="example">
+                          <b>SQL Server</b>
+                          <span>T-SQL that turns raw stage tables into reporting tables: MERGE upserts, deduplication, date and text cleanup, and window functions for donor retention, recurring giving and lapse-risk analysis.</span>
+                        </div>
+                        <div class="example">
+                          <b>Automation</b>
+                          <span>Jobs scheduled with SQL Server Agent and Task Scheduler, from hourly donation syncs to daily loads, plus a Playwright bot that downloads a report from a platform with no API.</span>
+                        </div>
+                        <div class="example">
+                          <b>Power BI</b>
+                          <span>Reports for fundraising and recurring donors, marketing, the online store, budget vs. actuals, HR, and the impact of the K-9 and law-enforcement support programs.</span>
+                        </div>
+                      </div>
 
-            <div class="flow" role="img" aria-label="Document flow: a quote becomes a sales order; the sales order produces dispatch notes (DTE 52) and invoices (DTE 33); invoices can get credit notes (DTE 61); every electronic document is issued to Chile's tax service, the SII.">
-              <div class="flow-node"><small>01</small>Quote</div>
-              <div class="flow-arrow"></div>
-              <div class="flow-node"><small>02</small>Sales order</div>
-              <div class="flow-arrow"></div>
-              <div class="flow-stack">
-                <p class="flow-stack-label">e-documents</p>
-                <div class="flow-node dte"><small>DTE 52</small>Dispatch note</div>
-                <div class="flow-node dte"><small>DTE 33</small>Invoice</div>
-                <div class="flow-sub"><span>↳</span><div class="flow-node dte"><small>DTE 61</small>Credit note</div></div>
+                      <h3 class="sub">&gt; sample query <small class="sub-note">// fictional schema, same idea</small></h3>
+                      <pre class="code"><code><span class="c">-- LYBUNT: gave Last Year But Unfortunately Not This year</span>
+<span class="k">WITH</span> yearly <span class="k">AS</span> (
+  <span class="k">SELECT</span> donor_id,
+         <span class="f">YEAR</span>(gift_date)  <span class="k">AS</span> gift_year,
+         <span class="f">SUM</span>(amount)       <span class="k">AS</span> total
+  <span class="k">FROM</span>   dbo.gifts
+  <span class="k">GROUP BY</span> donor_id, <span class="f">YEAR</span>(gift_date)
+)
+<span class="k">SELECT</span>   ly.donor_id, ly.total <span class="k">AS</span> last_year_total
+<span class="k">FROM</span>     yearly ly
+<span class="k">LEFT JOIN</span> yearly ty
+       <span class="k">ON</span> ty.donor_id = ly.donor_id
+      <span class="k">AND</span> ty.gift_year = ly.gift_year + <span class="n">1</span>
+<span class="k">WHERE</span>    ly.gift_year = <span class="f">YEAR</span>(<span class="f">GETDATE</span>()) - <span class="n">1</span>
+  <span class="k">AND</span>    ty.donor_id <span class="k">IS NULL</span>
+<span class="k">ORDER BY</span> ly.total <span class="k">DESC</span>;</code></pre>
+
+                      <h3 class="sub">&gt; stack</h3>
+                      <div class="chips">
+                        <span>SQL Server</span><span>T-SQL</span><span>SQL Server Agent</span><span>Python</span><span>pandas</span>
+                        <span>pyodbc</span><span>SQLAlchemy</span><span>REST APIs</span><span>Playwright</span><span>BigQuery</span>
+                        <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Power Apps</span><span>Excel</span>
+                      </div>
+                    </div>
+                  </article>
+                </section>
               </div>
-              <div class="flow-arrow"></div>
-              <div class="flow-node sii"><small>Tax service</small>SII</div>
-            </div>
-
-            <div class="stats">
-              <div class="stat"><b>3</b><span>SII e-document types</span></div>
-              <div class="stat"><b>8</b><span>business modules</span></div>
-              <div class="stat"><b>5</b><span>user roles</span></div>
-              <div class="stat"><b>24</b><span>data models</span></div>
-            </div>
-
-            <h3 class="sub">&gt; capabilities</h3>
-            <ul class="features">
-              <li>Quotes and sales orders with per-line cost and margin, and prices in CLP or USD per product</li>
-              <li>Electronic invoices, dispatch notes and credit notes issued to the SII through the Soluciones Market DTE engine, with RUTs and SII field limits validated before emitting</li>
-              <li>Dispatch notes that discount stock, purchase orders with goods receipt, and low-stock alerts</li>
-              <li>Projects with tasks and attachments, plus a draw.io-style editor for AV and network connectivity diagrams</li>
-              <li>Expenses by cost center, VAT and profitability reports, and a dashboard with sales rankings</li>
-              <li>Five roles with server-side permission checks, account lockout after 5 failed logins and encrypted backups</li>
-              <li>A staging copy of production that blocks real tax documents, for testing changes safely</li>
-            </ul>
-
-            <h3 class="sub">&gt; stack</h3>
-            <div class="chips">
-              <span>Next.js</span><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>Prisma</span>
-              <span>NextAuth</span><span>Tailwind CSS</span><span>shadcn/ui</span><span>Zod</span><span>React Flow</span>
-              <span>jsPDF</span><span>GitHub Actions</span><span>Vercel</span>
-            </div>
-
-            <div class="actions">
-              <span class="locked">PRIVATE REPO <b>//</b> CLIENT DATA STAYS PRIVATE</span>
-            </div>
-
-            <h3 class="part-title"><span>02.C</span> Tender radar</h3>
-            <p class="lead">
-              Chile's public institutions buy through <strong>Mercado Público</strong>, the state procurement platform.
-              Paid platforms sell tender alerts as a monthly subscription; this one is built into the ERP and tuned to
-              exactly what Hagotek installs. Every morning a <strong>GitHub Actions</strong> job pulls the open tenders,
-              scores the ones it hasn't seen yet and keeps the relevant ones. Unlike the rest of the ERP, this module only
-              works with public data, so it gets a real screenshot:
-            </p>
-
-            <figure class="screen">
-              <figcaption class="screen-bar">
-                <span>LIVE_FEED // tenders</span>
-                <span class="rec on"><i></i>DAILY SYNC</span>
-              </figcaption>
-              <a href="assets/hagotek-licitaciones.png" target="_blank" rel="noopener" title="Open full size">
-                <img src="assets/hagotek-licitaciones.png" alt="Hagotek ERP tenders page: open Mercado Público tenders ranked by score, each with closing date, title, buyer and region, category tags such as CCTV / seguridad and Con instalación, and the status Nueva" loading="lazy" />
-              </a>
-              <p class="screen-hint">&gt; tap / click to open full size</p>
-            </figure>
-
-            <h3 class="sub">&gt; how it decides</h3>
-            <ul class="features">
-              <li>Weighted keyword rules for five categories (audio, audiovisual, CCTV / security, access control, automation); a match in the title or description weighs more than one buried in the item list</li>
-              <li>The UNSPSC product codes of each item add to the score</li>
-              <li>Filters out tenders that only match by shared words (security guards, medical hearing aids…) and one-off event rentals</li>
-              <li>Flags the ones that include on-site installation, not just shipping boxes</li>
-              <li>Keeps tracking saved tenders after they close, to see whether they were awarded or declared void</li>
-              <li>Emails a morning digest of the new matches through Resend, with HTML built to render in Outlook</li>
-              <li>In the ERP: open / following / discarded views, category and installation filters, search, and a status for each tender from New to Bidding to Won or Lost</li>
-              <li>Deliberately simple: hand-tuned rules refined by checking what gets in and what doesn't, not a model</li>
-            </ul>
-
-            <div class="chips chips-row">
-              <span>Mercado Público API</span><span>GitHub Actions cron</span><span>Regex scoring</span><span>UNSPSC</span>
-              <span>Resend</span><span>Prisma</span>
             </div>
           </div>
-        </article>
-      </section>
+
+          <div class="track" id="dashboards" role="tabpanel" aria-labelledby="tab-dashboards" style="--i: 1">
+            <div class="track-front">
+              <div class="track-inner">
+                <section class="block">
+                  <p class="section-tag">// 02 — DASHBOARDS</p>
+                  <h2 class="section-title" data-text="BI SAMPLES">BI SAMPLES</h2>
+                  <article class="panel">
+                    <div class="panel-inner">
+                      <p class="lead">
+                        My work reports can't leave the building, so these are public samples built the same way, on
+                        <strong>fictional data</strong>, so they can be fully public.
+                      </p>
+                      <div class="examples">
+                        <div class="example locked-card"><b>Tender market</b><span>IN THE LAB</span></div>
+                        <div class="example locked-card"><b>Coverage map with radius</b><span>IN THE LAB</span></div>
+                        <div class="example locked-card"><b>Operations reports</b><span>IN THE LAB</span></div>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+
+          <div class="track" id="builds" role="tabpanel" aria-labelledby="tab-builds" style="--i: 2">
+            <div class="track-front">
+              <div class="track-inner">
+                <section class="block">
+                  <p class="section-tag">// 03.1 — IN PRODUCTION</p>
+                  <h2 class="section-title" data-text="HAGOTEK">HAGOTEK</h2>
+
+                  <article class="panel">
+                    <div class="panel-inner">
+                      <p class="panel-kicker">AV &amp; SECURITY INTEGRATOR <span>·</span> CHILE <span>·</span> CO-OWNER &amp; SOLE DEVELOPER</p>
+                      <p class="lead">
+                        Hagotek is a Chilean company that designs and installs <strong>audio, video, electronic security and smart
+                        lighting</strong> systems across the country. I'm one of its co-owners, and I built its two pieces of software
+                        on my own: the public website and the ERP the company runs on.
+                      </p>
+
+                      <h3 class="part-title"><span>A</span> Website</h3>
+                      <p class="lead">
+                        A bilingual <strong>Spanish / English</strong> site with a page for each service and a direct WhatsApp line
+                        for quotes. Static, built with <strong>Astro</strong>, deployed on <strong>Netlify</strong> and with a sitemap
+                        for search engines.
+                      </p>
+
+                      <figure class="screen">
+                        <figcaption class="screen-bar">
+                          <span>LIVE_FEED // hagotek.cl</span>
+                          <span class="rec on"><i></i>ONLINE</span>
+                        </figcaption>
+                        <img src="assets/hagotek-landing.jpg" alt="Hagotek website home page: a conference room with a video wall behind the headline 'Complete engineering solutions in audio, video, security, and smart lighting'" loading="lazy" />
+                      </figure>
+
+                      <div class="chips chips-row">
+                        <span>Astro</span><span>Netlify</span><span>i18n ES / EN</span><span>Sitemap</span>
+                      </div>
+
+                      <div class="actions">
+                        <a class="btn btn-primary" href="https://hagotek.cl/en/" target="_blank" rel="noopener">Visit hagotek.cl</a>
+                      </div>
+
+                      <h3 class="part-title"><span>B</span> In-house ERP</h3>
+                      <p class="lead">
+                        A private web app that covers the whole commercial cycle: a quote becomes a sales order, the order produces
+                        dispatch notes and invoices, and every tax document is issued electronically to Chile's tax service
+                        (<strong>SII</strong>). The team uses it every day. Its data is real client information, so instead of
+                        screenshots, this is how documents flow through it:
+                      </p>
+
+                      <div class="flow" role="img" aria-label="Document flow: a quote becomes a sales order; the sales order produces dispatch notes (DTE 52) and invoices (DTE 33); invoices can get credit notes (DTE 61); every electronic document is issued to Chile's tax service, the SII.">
+                        <div class="flow-node"><small>01</small>Quote</div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-node"><small>02</small>Sales order</div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-stack">
+                          <p class="flow-stack-label">e-documents</p>
+                          <div class="flow-node dte"><small>DTE 52</small>Dispatch note</div>
+                          <div class="flow-node dte"><small>DTE 33</small>Invoice</div>
+                          <div class="flow-sub"><span>↳</span><div class="flow-node dte"><small>DTE 61</small>Credit note</div></div>
+                        </div>
+                        <div class="flow-arrow"></div>
+                        <div class="flow-node sii"><small>Tax service</small>SII</div>
+                      </div>
+
+                      <div class="stats">
+                        <div class="stat"><b>3</b><span>SII e-document types</span></div>
+                        <div class="stat"><b>8</b><span>business modules</span></div>
+                        <div class="stat"><b>5</b><span>user roles</span></div>
+                        <div class="stat"><b>24</b><span>data models</span></div>
+                      </div>
+
+                      <h3 class="sub">&gt; capabilities</h3>
+                      <ul class="features">
+                        <li>Quotes and sales orders with per-line cost and margin, and prices in CLP or USD per product</li>
+                        <li>Electronic invoices, dispatch notes and credit notes issued to the SII through the Soluciones Market DTE engine, with RUTs and SII field limits validated before emitting</li>
+                        <li>Dispatch notes that discount stock, purchase orders with goods receipt, and low-stock alerts</li>
+                        <li>Projects with tasks and attachments, plus a draw.io-style editor for AV and network connectivity diagrams</li>
+                        <li>Expenses by cost center, VAT and profitability reports, and a dashboard with sales rankings</li>
+                        <li>Five roles with server-side permission checks, account lockout after 5 failed logins and encrypted backups</li>
+                        <li>A staging copy of production that blocks real tax documents, for testing changes safely</li>
+                      </ul>
+
+                      <h3 class="sub">&gt; stack</h3>
+                      <div class="chips">
+                        <span>Next.js</span><span>TypeScript</span><span>React</span><span>PostgreSQL</span><span>Prisma</span>
+                        <span>NextAuth</span><span>Tailwind CSS</span><span>shadcn/ui</span><span>Zod</span><span>React Flow</span>
+                        <span>jsPDF</span><span>GitHub Actions</span><span>Vercel</span>
+                      </div>
+
+                      <div class="actions">
+                        <span class="locked">PRIVATE REPO <b>//</b> CLIENT DATA STAYS PRIVATE</span>
+                      </div>
+
+                      <h3 class="part-title"><span>C</span> Tender radar</h3>
+                      <p class="lead">
+                        Chile's public institutions buy through <strong>Mercado Público</strong>, the state procurement platform.
+                        Paid platforms sell tender alerts as a monthly subscription; this one is built into the ERP and tuned to
+                        exactly what Hagotek installs. Every morning a <strong>GitHub Actions</strong> job pulls the open tenders,
+                        scores the ones it hasn't seen yet and keeps the relevant ones. Unlike the rest of the ERP, this module only
+                        works with public data, so it gets a real screenshot:
+                      </p>
+
+                      <figure class="screen">
+                        <figcaption class="screen-bar">
+                          <span>LIVE_FEED // tenders</span>
+                          <span class="rec on"><i></i>DAILY SYNC</span>
+                        </figcaption>
+                        <a href="assets/hagotek-licitaciones.png" target="_blank" rel="noopener" title="Open full size">
+                          <img src="assets/hagotek-licitaciones.png" alt="Hagotek ERP tenders page: open Mercado Público tenders ranked by score, each with closing date, title, buyer and region, category tags such as CCTV / seguridad and Con instalación, and the status Nueva" loading="lazy" />
+                        </a>
+                        <p class="screen-hint">&gt; tap / click to open full size</p>
+                      </figure>
+
+                      <h3 class="sub">&gt; how it decides</h3>
+                      <ul class="features">
+                        <li>Weighted keyword rules for five categories (audio, audiovisual, CCTV / security, access control, automation); a match in the title or description weighs more than one buried in the item list</li>
+                        <li>The UNSPSC product codes of each item add to the score</li>
+                        <li>Filters out tenders that only match by shared words (security guards, medical hearing aids…) and one-off event rentals</li>
+                        <li>Flags the ones that include on-site installation, not just shipping boxes</li>
+                        <li>Keeps tracking saved tenders after they close, to see whether they were awarded or declared void</li>
+                        <li>Emails a morning digest of the new matches through Resend, with HTML built to render in Outlook</li>
+                        <li>In the ERP: open / following / discarded views, category and installation filters, search, and a status for each tender from New to Bidding to Won or Lost</li>
+                        <li>Deliberately simple: hand-tuned rules refined by checking what gets in and what doesn't, not a model</li>
+                      </ul>
+
+                      <div class="chips chips-row">
+                        <span>Mercado Público API</span><span>GitHub Actions cron</span><span>Regex scoring</span><span>UNSPSC</span>
+                        <span>Resend</span><span>Prisma</span>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="block">
+                  <p class="section-tag">// 03.2 — VOICE AI</p>
+                  <h2 class="section-title" data-text="MI ASISTENTE">MI ASISTENTE</h2>
+
+                  <article class="panel">
+                    <div class="panel-inner">
+                      <p class="panel-kicker">REAL-TIME VOICE AI COMPANION <span>·</span> LANGUAGE COACH <span>·</span> WINDOWS <span>·</span> ANDROID</p>
+                      <p class="lead">
+                        A desktop voice assistant I talk to through my earbuds. It streams audio to the
+                        <strong>Gemini Live API</strong> (or the <strong>OpenAI Realtime API</strong>) over WebSockets, answers in a
+                        natural voice and can be interrupted mid-sentence. Its listener modes stay silent during meetings and only
+                        whisper a correction when someone says something false, a neutral counterpoint to sweeping opinions, or a
+                        useful fact, checking <strong>Wikipedia</strong> before correcting.
+                      </p>
+                      <p class="lead">
+                        It's also the perfect partner to learn <strong>English, Spanish, Portuguese or Japanese</strong>: it talks
+                        with you in the language, corrects your mistakes on the spot and saves them so you can review them later.
+                      </p>
+
+                      <figure class="screen">
+                        <figcaption class="screen-bar">
+                          <span>LIVE_FEED // mi-asistente.exe</span>
+                          <span class="rec"><i></i>REC</span>
+                        </figcaption>
+                        <img src="assets/mi-asistente.png" alt="Mi Asistente desktop app in dark mode, in fact-checker plus useful-facts mode, correcting a false claim after a Wikipedia lookup" loading="lazy" />
+                      </figure>
+
+                      <div class="stats">
+                        <div class="stat"><b>4</b><span>languages to learn</span></div>
+                        <div class="stat"><b>30</b><span>selectable voices</span></div>
+                        <div class="stat"><b>11</b><span>memory folders</span></div>
+                        <div class="stat"><b>7</b><span>personality modes</span></div>
+                      </div>
+
+                      <h3 class="sub">&gt; capabilities</h3>
+                      <ul class="features">
+                        <li>Real-time speech-to-speech with server-side voice detection, barge-in and automatic session resumption</li>
+                        <li>Language-coach modes for English, Spanish, Portuguese and Japanese that correct mistakes as you speak</li>
+                        <li>Fact-checker modes with Wikipedia lookups, and Google Search when the API plan allows it</li>
+                        <li>Long-term memory in SQLite organized in folders (agenda, music, learning…), searchable by voice and in the app</li>
+                        <li>Editable personalities as Markdown profiles, 30 voices, sleep mode and global hotkeys</li>
+                        <li>Warm light/dark desktop UI built with customtkinter</li>
+                        <li>Scripted server-event tests for interruptions, tool calls and reconnects, all offline with Pytest</li>
+                      </ul>
+
+                      <h3 class="sub">&gt; stack</h3>
+                      <div class="chips">
+                        <span>Python</span><span>asyncio</span><span>Gemini Live API</span><span>OpenAI Realtime API</span>
+                        <span>WebSockets</span><span>SQLite</span><span>NumPy</span><span>sounddevice</span>
+                        <span>customtkinter</span><span>Pytest</span>
+                      </div>
+
+                      <div class="actions">
+                        <a class="btn btn-primary" href="https://github.com/jooabarca/mi-asistente/releases/latest/download/Mi-Asistente-Windows.zip">Download for Windows</a>
+                        <a class="btn btn-primary" href="https://github.com/jooabarca/mi-asistente-android/releases/latest/download/Mi-Asistente-Android.apk">Download for Android</a>
+                        <a class="btn btn-ghost" href="https://github.com/jooabarca/mi-asistente" target="_blank" rel="noopener">GitHub Repo</a>
+                        <p class="dl-note">&gt; free demo // windows 10-11 // 41 MB zip // unzip and run <code>Mi Asistente.exe</code>. Use earbuds. If Windows says "protected your PC", click <em>More info</em> &rarr; <em>Run anyway</em>.</p>
+                        <p class="dl-note">&gt; android 10+ // 31 MB apk // open it on your phone and allow installing from your browser, then give it the microphone.</p>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <section class="block">
         <p class="section-tag">// 99 — SIDE QUEST</p>
@@ -262,7 +431,10 @@
     tick();
     setInterval(tick, 1000);
 
-    // Keep screenshots clean: cut a hole in the scanline overlay over each one.
+    // Track ring state (used by the scanline holes below)
+    let spinning = false;
+
+    // Keep screenshots clean: cut a hole in the scanline overlay over each one on the front face.
     // The mask is one full layer minus one layer per screenshot (exclude / xor).
     const scan = document.querySelector(".scanlines");
     const shots = [...document.querySelectorAll(".screen img")];
@@ -271,7 +443,8 @@
       const layers = ["linear-gradient(#000, #000)"];
       const pos = ["0 0"];
       const size = ["100% 100%"];
-      for (const img of shots) {
+      const visible = spinning ? [] : shots.filter((img) => !img.closest(".track")?.inert);
+      for (const img of visible) {
         const r = img.getBoundingClientRect();
         layers.push("linear-gradient(#000, #000)");
         pos.push(`${r.left - base.left}px ${r.top - base.top}px`);
@@ -289,6 +462,95 @@
     // lazy images and web fonts change the layout after load, so re-cut on any resize
     new ResizeObserver(cutHoles).observe(document.body);
     shots.forEach((img) => img.addEventListener("load", cutHoles));
+
+    // Track ring: the three tracks are faces of a ring; the tab buttons turn the chosen one to the front
+    const trackIds = ["work", "dashboards", "builds"];
+    const stage = document.querySelector(".tracks-stage");
+    const rotor = document.querySelector(".tracks-rotor");
+    const tracks = trackIds.map((id) => document.getElementById(id));
+    const inners = tracks.map((t) => t.querySelector(".track-inner"));
+    const tabs = [...document.querySelectorAll(".ring-tabs [role=tab]")];
+    let turn = 0;
+    let active = 0;
+    // the faces are as wide as the page content and the stage is as tall as the front face
+    const main = document.querySelector("main");
+    const fit = () => {
+      stage.style.setProperty("--cw", main.clientWidth + "px");
+      stage.style.height = inners[active].offsetHeight + "px";
+    };
+    const observer = new ResizeObserver(fit);
+    inners.forEach((el) => observer.observe(el));
+    observer.observe(main);
+    // keep the vanishing point in the middle of the screen so the side faces look right while scrolling
+    const aim = () => {
+      stage.style.perspectiveOrigin = `50% ${innerHeight / 2 - stage.getBoundingClientRect().top}px`;
+    };
+    addEventListener("scroll", () => requestAnimationFrame(aim), { passive: true });
+    addEventListener("resize", aim);
+    // which face sits on each side (relative to the front one), so CSS can fade it toward the middle
+    const setSides = () => tracks.forEach((t, k) => {
+      const rel = (k - active + 3) % 3;
+      t.classList.toggle("side-right", rel === 1);
+      t.classList.toggle("side-left", rel === 2);
+    });
+    rotor.addEventListener("transitionend", (e) => {
+      if (e.target !== rotor) return;
+      spinning = false;
+      setSides();
+      cutHoles();
+    });
+    const show = (i) => {
+      // turn the short way round: one step left or right, never two
+      let delta = (i - (((turn % 3) + 3) % 3) + 3) % 3;
+      if (delta === 2) delta = -1;
+      turn += delta;
+      active = i;
+      // no transition to wait for: same track, a deep link on load, or reduced motion
+      const animated = delta !== 0 && !rotor.classList.contains("no-anim")
+        && parseFloat(getComputedStyle(rotor).transitionDuration) > 0;
+      spinning = animated;
+      rotor.style.setProperty("--turn", turn);
+      tabs.forEach((t, k) => {
+        t.setAttribute("aria-selected", k === i);
+        t.tabIndex = k === i ? 0 : -1;
+      });
+      tracks.forEach((t, k) => {
+        t.inert = k !== i;
+        t.setAttribute("aria-hidden", k !== i);
+        // while turning, every face shows in full
+        if (animated) t.classList.remove("side-left", "side-right");
+      });
+      if (!animated) setSides();
+      fit();
+      aim();
+      cutHoles();
+    };
+    const select = (i) => {
+      show(i);
+      history.replaceState(null, "", "#" + trackIds[i]);
+    };
+    tabs.forEach((t, k) => {
+      t.addEventListener("click", () => select(k));
+      t.addEventListener("keydown", (e) => {
+        const step = { ArrowRight: 1, ArrowLeft: -1 }[e.key];
+        if (!step) return;
+        e.preventDefault();
+        const next = (k + step + 3) % 3;
+        select(next);
+        tabs[next].focus();
+      });
+    });
+    document.querySelector(".ring-arrow.prev").addEventListener("click", () => select((active + 2) % 3));
+    document.querySelector(".ring-arrow.next").addEventListener("click", () => select((active + 1) % 3));
+    const fromHash = () => {
+      const k = trackIds.indexOf(location.hash.slice(1));
+      show(k >= 0 ? k : active);
+    };
+    window.addEventListener("hashchange", fromHash);
+    // a shared link like joseabarca.com/#builds opens on that track without spinning
+    rotor.classList.add("no-anim");
+    fromHash();
+    requestAnimationFrame(() => requestAnimationFrame(() => rotor.classList.remove("no-anim")));
   </script>
 </body>
 </html>
