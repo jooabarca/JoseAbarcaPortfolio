@@ -204,9 +204,10 @@
                   <article class="panel">
                     <div class="panel-inner">
                       <p class="lead">
-                        A live Power BI dashboard on <strong>real public data</strong>: how Chile's state buys around the mining
-                        sector on <strong>Mercado Público</strong>. A GitHub Actions job rebuilds the data every day and Power BI
-                        refreshes from it. Nothing here comes from a client or from Hagotek.
+                        A <strong>live</strong> Power BI dashboard on <strong>real public data</strong>: every mining-related tender
+                        in Chile's <strong>Mercado Público</strong> since January 2024, with the buyers, the bidders and the winners.
+                        It pulls fresh data from ChileCompra <strong>every day</strong> and refreshes itself, so what you see
+                        keeps moving without anyone touching it.
                       </p>
 
                       <figure class="screen">
@@ -223,12 +224,14 @@
                         <p class="screen-hint">&gt; three pages: overview, buyers and where, suppliers. <a href="https://app.powerbi.com/view?r=eyJrIjoiY2JjMzgxZGYtN2U5Zi00NzFkLTlkNWMtYmY5YjVkN2IzMTEyIiwidCI6Ijk4NDRjMjAzLTNlMTAtNDQ0Yy04MjRjLTRiZTUwNDJlZTY5MCIsImMiOjR9" target="_blank" rel="noopener">open full screen</a></p>
                       </figure>
 
-                      <h3 class="sub">&gt; how it works</h3>
+                      <h3 class="sub">&gt; what it tells you</h3>
                       <ul class="features">
-                        <li>The pipeline downloads ChileCompra's monthly open-data files, keeps only mining-related tenders (mining buyers, mining UNSPSC codes, strong keywords) and builds a star schema as CSV files</li>
-                        <li>Power BI reads the CSVs from a public GitHub repo with no gateway and no API key, so the daily refresh runs by itself</li>
-                        <li>Supplier tax IDs are never published, and suppliers that are people appear as "Persona natural N"</li>
-                        <li>Measures include year-over-year comparisons, top-5 supplier concentration and the share of tenders with a single bidder</li>
+                        <li><strong>Who buys:</strong> the agencies behind mining tenders, how many they open and how much they award, by region and by size of purchase</li>
+                        <li><strong>What and when:</strong> machinery and vehicles, supplies or administrative purchases, month by month and against the same period last year</li>
+                        <li><strong>Who wins:</strong> suppliers ranked by amount awarded, and each one's win rate: tenders won against tenders entered</li>
+                        <li><strong>How hard it is to win:</strong> how many bidders a tender draws, and how many are decided with a single offer</li>
+                        <li><strong>At what price:</strong> the amount awarded against the estimated budget, by purchase size</li>
+                        <li><strong>Who holds the market:</strong> the share of the money taken by the top 5 suppliers</li>
                       </ul>
 
                       <div class="chips chips-row">
