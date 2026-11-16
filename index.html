@@ -200,15 +200,65 @@
               <div class="track-inner">
                 <section class="block">
                   <p class="section-tag">// 02 — DASHBOARDS</p>
-                  <h2 class="section-title" data-text="BI SAMPLES">BI SAMPLES</h2>
+                  <h2 class="section-title" data-text="MINING TENDERS">MINING TENDERS</h2>
                   <article class="panel">
                     <div class="panel-inner">
                       <p class="lead">
-                        My work reports can't leave the building, so these are public samples built the same way, on
+                        A live Power BI dashboard on <strong>real public data</strong>: how Chile's state buys around the mining
+                        sector on <strong>Mercado Público</strong>. A GitHub Actions job rebuilds the data every day and Power BI
+                        refreshes from it. Nothing here comes from a client or from Hagotek.
+                      </p>
+
+                      <figure class="screen">
+                        <figcaption class="screen-bar">
+                          <span>LIVE_DASHBOARD // power bi</span>
+                          <span class="rec on"><i></i>DAILY REFRESH</span>
+                        </figcaption>
+                        <div class="embed">
+                          <iframe
+                            title="Mining tenders in Mercado Público: Power BI dashboard"
+                            src="https://app.powerbi.com/view?r=eyJrIjoiY2JjMzgxZGYtN2U5Zi00NzFkLTlkNWMtYmY5YjVkN2IzMTEyIiwidCI6Ijk4NDRjMjAzLTNlMTAtNDQ0Yy04MjRjLTRiZTUwNDJlZTY5MCIsImMiOjR9"
+                            loading="lazy" allowfullscreen></iframe>
+                        </div>
+                        <p class="screen-hint">&gt; three pages: overview, buyers and where, suppliers. <a href="https://app.powerbi.com/view?r=eyJrIjoiY2JjMzgxZGYtN2U5Zi00NzFkLTlkNWMtYmY5YjVkN2IzMTEyIiwidCI6Ijk4NDRjMjAzLTNlMTAtNDQ0Yy04MjRjLTRiZTUwNDJlZTY5MCIsImMiOjR9" target="_blank" rel="noopener">open full screen</a></p>
+                      </figure>
+
+                      <h3 class="sub">&gt; how it works</h3>
+                      <ul class="features">
+                        <li>The pipeline downloads ChileCompra's monthly open-data files, keeps only mining-related tenders (mining buyers, mining UNSPSC codes, strong keywords) and builds a star schema as CSV files</li>
+                        <li>Power BI reads the CSVs from a public GitHub repo with no gateway and no API key, so the daily refresh runs by itself</li>
+                        <li>Supplier tax IDs are never published, and suppliers that are people appear as "Persona natural N"</li>
+                        <li>Measures include year-over-year comparisons, top-5 supplier concentration and the share of tenders with a single bidder</li>
+                      </ul>
+
+                      <div class="chips chips-row">
+                        <span>Power BI</span><span>DAX</span><span>Star schema</span><span>Python</span>
+                        <span>GitHub Actions cron</span><span>Datos Abiertos ChileCompra</span>
+                      </div>
+
+                      <p class="data-note">
+                        Source: Dirección ChileCompra, Datos Abiertos. Only closed tenders with bids are included, and awards show
+                        up 8 to 45 days after closing, so the latest months have no amounts yet. Independent project, not
+                        affiliated with ChileCompra.
+                      </p>
+
+                      <div class="actions">
+                        <a class="btn btn-ghost" href="https://github.com/jooabarca/mineria-licitaciones-chile" target="_blank" rel="noopener">GitHub Repo</a>
+                      </div>
+                    </div>
+                  </article>
+                </section>
+
+                <section class="block">
+                  <p class="section-tag">// 02.1 — MORE SAMPLES</p>
+                  <h2 class="section-title" data-text="IN THE LAB">IN THE LAB</h2>
+                  <article class="panel">
+                    <div class="panel-inner">
+                      <p class="lead">
+                        My work reports can't leave the building, so these next samples are built the same way on
                         <strong>fictional data</strong>, so they can be fully public.
                       </p>
                       <div class="examples">
-                        <div class="example locked-card"><b>Tender market</b><span>IN THE LAB</span></div>
                         <div class="example locked-card"><b>Coverage map with radius</b><span>IN THE LAB</span></div>
                         <div class="example locked-card"><b>Operations reports</b><span>IN THE LAB</span></div>
                       </div>

@@ -1359,3 +1359,32 @@ footer span {
     transition: none !important;
   }
 }
+
+/* ---------------------------------------------------- embedded Power BI report */
+
+.embed {
+  position: relative;
+  width: 100%;
+  /* 16:9 report page + 56px for Power BI's bottom bar */
+  height: 0;
+  padding-top: calc(56.25% + 56px);
+}
+
+.embed iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background: #0d1b26;
+}
+
+.screen-hint a {
+  color: var(--cyan);
+}
+
+.data-note {
+  margin-top: 1.2rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
