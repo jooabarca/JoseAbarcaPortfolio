@@ -117,8 +117,8 @@
                       <div class="flow pipeline" role="img" aria-label="Data pipeline: donations, CRM, e-commerce, marketing and web platforms feed Python ETL jobs, which load SQL Server staging tables and merge them into reporting tables, which feed Power BI reports.">
                         <div class="flow-stack">
                           <p class="flow-stack-label">sources</p>
-                          <div class="flow-node dte"><small>Giving</small>Donations · CRM</div>
-                          <div class="flow-node dte"><small>Commerce</small>Store · Shipping</div>
+                          <div class="flow-node dte"><small>Giving</small>FundraiseUp · Virtuous</div>
+                          <div class="flow-node dte"><small>Commerce</small>Shopify · ShipStation</div>
                           <div class="flow-node dte"><small>Marketing</small>Ads · Social · Web</div>
                         </div>
                         <div class="flow-arrow"></div>
@@ -140,7 +140,7 @@
                       <div class="examples">
                         <div class="example">
                           <b>Data pipelines</b>
-                          <span>Python ETL from REST APIs (donations, CRM, Shopify, ShipStation, GA4, Google Ads, Meta, YouTube, volunteer and matching-gift platforms) into SQL Server staging tables, with retries, pagination and incremental loads.</span>
+                          <span>Python ETL from REST APIs (FundraiseUp donations, the Virtuous CRM, Shopify, ShipStation, GA4, Google Ads, Meta, YouTube, volunteer and matching-gift platforms) into SQL Server staging tables, with retries, pagination and incremental loads.</span>
                         </div>
                         <div class="example">
                           <b>SQL Server</b>
@@ -174,10 +174,15 @@
   <span class="k">AND</span>    ty.donor_id <span class="k">IS NULL</span>
 <span class="k">ORDER BY</span> ly.total <span class="k">DESC</span>;</code></pre>
 
+                      <h3 class="sub">&gt; platforms I know inside out</h3>
+                      <div class="chips">
+                        <span>Virtuous CRM</span><span>FundraiseUp</span><span>Shopify</span><span>BigQuery</span>
+                      </div>
+
                       <h3 class="sub">&gt; stack</h3>
                       <div class="chips">
                         <span>SQL Server</span><span>T-SQL</span><span>SQL Server Agent</span><span>Python</span><span>pandas</span>
-                        <span>pyodbc</span><span>SQLAlchemy</span><span>REST APIs</span><span>Playwright</span><span>BigQuery</span>
+                        <span>pyodbc</span><span>SQLAlchemy</span><span>REST APIs</span><span>Playwright</span>
                         <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Power Apps</span><span>Excel</span>
                       </div>
                     </div>

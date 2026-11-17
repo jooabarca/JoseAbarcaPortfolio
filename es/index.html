@@ -121,8 +121,8 @@
                       <div class="flow pipeline" role="img" aria-label="Pipeline de datos: las plataformas de donaciones, CRM, e-commerce, marketing y web alimentan procesos ETL en Python, que cargan tablas staging en SQL Server y las consolidan en tablas de reportería, que alimentan los reportes de Power BI.">
                         <div class="flow-stack">
                           <p class="flow-stack-label">fuentes</p>
-                          <div class="flow-node dte"><small>Donaciones</small>Donaciones · CRM</div>
-                          <div class="flow-node dte"><small>Comercio</small>Tienda · Envíos</div>
+                          <div class="flow-node dte"><small>Donaciones</small>FundraiseUp · Virtuous</div>
+                          <div class="flow-node dte"><small>Comercio</small>Shopify · ShipStation</div>
                           <div class="flow-node dte"><small>Marketing</small>Anuncios · Redes · Web</div>
                         </div>
                         <div class="flow-arrow"></div>
@@ -144,7 +144,7 @@
                       <div class="examples">
                         <div class="example">
                           <b>Pipelines de datos</b>
-                          <span>ETL en Python desde APIs REST (donaciones, CRM, Shopify, ShipStation, GA4, Google Ads, Meta, YouTube, y plataformas de voluntariado y de donaciones pareadas por empleadores) hacia tablas staging en SQL Server, con reintentos, paginación y cargas incrementales.</span>
+                          <span>ETL en Python desde APIs REST (donaciones de FundraiseUp, el CRM Virtuous, Shopify, ShipStation, GA4, Google Ads, Meta, YouTube, y plataformas de voluntariado y de donaciones pareadas por empleadores) hacia tablas staging en SQL Server, con reintentos, paginación y cargas incrementales.</span>
                         </div>
                         <div class="example">
                           <b>SQL Server</b>
@@ -178,10 +178,15 @@
   <span class="k">AND</span>    ty.donor_id <span class="k">IS NULL</span>
 <span class="k">ORDER BY</span> ly.total <span class="k">DESC</span>;</code></pre>
 
+                      <h3 class="sub">&gt; plataformas que manejo a fondo</h3>
+                      <div class="chips">
+                        <span>Virtuous CRM</span><span>FundraiseUp</span><span>Shopify</span><span>BigQuery</span>
+                      </div>
+
                       <h3 class="sub">&gt; stack</h3>
                       <div class="chips">
                         <span>SQL Server</span><span>T-SQL</span><span>SQL Server Agent</span><span>Python</span><span>pandas</span>
-                        <span>pyodbc</span><span>SQLAlchemy</span><span>APIs REST</span><span>Playwright</span><span>BigQuery</span>
+                        <span>pyodbc</span><span>SQLAlchemy</span><span>APIs REST</span><span>Playwright</span>
                         <span>Power BI</span><span>DAX</span><span>Power Query</span><span>Power Apps</span><span>Excel</span>
                       </div>
                     </div>
