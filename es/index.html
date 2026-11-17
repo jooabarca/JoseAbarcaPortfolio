@@ -160,6 +160,26 @@
                         </div>
                       </div>
 
+                      <h3 class="sub">&gt; lo que arreglé y mejoré</h3>
+                      <div class="examples">
+                        <div class="example">
+                          <b>Actualizaciones que funcionan</b>
+                          <span>Varios dashboards fallaban seguido en la actualización programada por culpa de conectores externos. Llevé sus datos a nuestro propio SQL Server y los rehíce sobre esa base, y ahora se actualizan sin problemas.</span>
+                        </div>
+                        <div class="example">
+                          <b>Modelos más livianos</b>
+                          <span>Limpié modelos de Power BI con Measure Killer, quitando medidas y columnas sin uso para que los reportes sean más livianos y fáciles de mantener.</span>
+                        </div>
+                        <div class="example">
+                          <b>Reportes programados</b>
+                          <span>Reportes semanales y mensuales para los encargados de grandes donantes (Major Gift Officers), ahora automatizados, lo que les ahorra mucho trabajo manual.</span>
+                        </div>
+                        <div class="example">
+                          <b>Mapa de donantes</b>
+                          <span>Un mapa que los Major Gift Officers filtran por zona y exportan antes de una visita, en vez de pedir un listado nuevo de donantes cada vez que viajan.</span>
+                        </div>
+                      </div>
+
                       <h3 class="sub">&gt; consulta de ejemplo <small class="sub-note">// esquema ficticio, misma idea</small></h3>
                       <pre class="code"><code><span class="c">-- LYBUNT: donó el año pasado, pero todavía no este año</span>
 <span class="k">WITH</span> yearly <span class="k">AS</span> (

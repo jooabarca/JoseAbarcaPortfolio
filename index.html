@@ -156,6 +156,26 @@
                         </div>
                       </div>
 
+                      <h3 class="sub">&gt; what I fixed and improved</h3>
+                      <div class="examples">
+                        <div class="example">
+                          <b>Refreshes that work</b>
+                          <span>Several dashboards kept failing on scheduled refresh because of third-party connectors. I moved their data into our own SQL Server and rebuilt them on top of it, and now they refresh reliably.</span>
+                        </div>
+                        <div class="example">
+                          <b>Leaner models</b>
+                          <span>Cleaned up Power BI models with Measure Killer, removing unused measures and columns so the reports are lighter and easier to maintain.</span>
+                        </div>
+                        <div class="example">
+                          <b>Reports on schedule</b>
+                          <span>Weekly and monthly reports for the Major Gift Officers, now automated, which saves them a lot of manual work.</span>
+                        </div>
+                        <div class="example">
+                          <b>Donor map</b>
+                          <span>A map the Major Gift Officers filter by area and export before a visit, instead of asking for a new donor list every time they travel.</span>
+                        </div>
+                      </div>
+
                       <h3 class="sub">&gt; sample query <small class="sub-note">// fictional schema, same idea</small></h3>
                       <pre class="code"><code><span class="c">-- LYBUNT: gave Last Year But Unfortunately Not This year</span>
 <span class="k">WITH</span> yearly <span class="k">AS</span> (
